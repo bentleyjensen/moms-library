@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/bentleyjensen/moms-library#readme",
   "dependencies": {
-    "getconfig": "^4.4.1"
+    "bluebird": "^3.5.1",
+    "getconfig": "^4.4.1",
+    "pg-promise": "^8.4.0",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "jslint": "^0.12.0"
   }
 }
