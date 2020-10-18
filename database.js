@@ -1,18 +1,33 @@
-'use scrict';
+const promise = require('bluebird');
+const config = require('getconfig');
 
-const config = require("getconfig");
-const Promise = require("bluebird");
+const initOptions = {
+    promiseLib: promise //override default (ES6 Promise)
+}
 
-const pgopts = {
-    promiseLib: Promise
-};
+const pgp = require ('pg-promise')(initOptions);
 
-const pgp = require("pg-promise")(pgopts);
+//Set up connection
+const cn = {
+    host: config.db.host,
+    port: config.db.port,
+    database: config.db.database,
+    user: config.db.user,
+    password: config.db.password
+}
 
-const dbOpts = config.pg.connection;
+const db = pgp(cn);
 
-const db = pgp(dbOpts);
+const query = "SELECT * FROM students"
 
-module.exports = {
-    db
-};
+db.any(query)
+    .then((data) => {
+        data.forEach((item)=>{
+            console.log(item);
+        });
+    }).catch(error => {
+      console.log('ERROR:\n',error);
+    })
+    .finally(db.$pool.end);
+
+//module.exports(db);
