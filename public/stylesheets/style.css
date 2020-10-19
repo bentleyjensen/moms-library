@@ -1,8 +1,40 @@
+@@font-face {
+  font-family: BerlinSans;
+  src: url(stylesheets/BerlinSans.ttf)
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  font: 16px BerlinSans, BerlinSans, BerlinSans, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+img.navBar {
+  width:35%;
+  float:left;
+}
+div.separator {
+    height:5%
+}
+.navcontainer {
+  width: auto;
+  height: auto;
+  margin: auto;
+
+}
+.navButton {
+  max-width: 25%;
+  height: auto;
+  overflow: auto
+}
+
+.navPage {
+  width: 75%;
+  height: auto;
+  overflow: auto
 }

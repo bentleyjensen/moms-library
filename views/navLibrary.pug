@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    section.navcontainer
+      table
+        tr
+          td
+            a(href="/")
+              img.navBar(src="/images/NavHomeUnselected.svg" style="float:left;")
+          td
+            a(href="/library")
+              img.navBar(src="/images/NavLibrarySelected.svg" style="margin-left:30%")
+          td
+            a(href="/admin")
+              img.navBar(src="/images/NavAdminUnselected.svg" style="margin-left:70%")
+    block content
