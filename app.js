@@ -17,33 +17,38 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Set Router files
-var indexRouter = require('./routes/index');
+var homeRouter = require('./routes/home');
+var homeCheckinRouter = require('./routes/homeCheckin');
+var homeCheckoutRouter = require('./routes/homeCheckout');
+
 var libraryRouter = require('./routes/library');
+var librarySearchRouter = require('./routes/librarySearch');
+var libraryAccountRouter = require('./routes/libraryAccount');
+
 var adminRouter = require('./routes/admin');
-var loginRouter = require('./routes/login');
-var checkinRouter = require('./routes/checkin');
-var checkoutRouter = require('./routes/checkout');
-var searchRouter = require('./routes/search');
-var studentAccountRouter = require('./routes/studentAccount');
-var reportsRouter = require('./routes/reports');
-var addBooksRouter = require('./routes/addBooks');
+var adminLoginRouter = require('./routes/adminLogin');
+var adminReportsRouter = require('./routes/adminReports');
+var adminAddBooksRouter = require('./routes/adminAddBooks');
 var adminSearchRouter = require('./routes/adminSearch');
 var adminStudentsRouter = require('./routes/adminStudents');
 
 
+
 // Create Routes
-app.use('/', indexRouter);
+app.use('/', homeRouter);
+app.use('/checkin', homeCheckinRouter);
+app.use('/checkout', homeCheckoutRouter);
+
 app.use('/library', libraryRouter);
+app.use('/search', librarySearchRouter);
+app.use('/studentAccount', libraryAccountRouter);
+
 app.use('/admin', adminRouter);
-app.use('/admin/login', loginRouter);
-app.use('/checkin', checkinRouter);
-app.use('/checkout', checkoutRouter);
-app.use('/search', searchRouter);
-app.use('/studentAccount', studentAccountRouter);
-app.use('/admin/reports', reportsRouter);
-app.use('/admin/addBooks', addBooksRouter);
-app.use('admin/Search', adminSearchRouter);
-app.use('/admin/Students', adminStudentsRouter);
+app.use('/admin/login', adminLoginRouter);
+app.use('/admin/reports', adminReportsRouter);
+app.use('/admin/addBooks', adminAddBooksRouter);
+app.use('/admin/search', adminSearchRouter);
+app.use('/admin/students', adminStudentsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,12 @@
+* whole page
+  * headers with page names
+  separator
+  body
+    split-2 pages and split-4 pages for navigating
+    searching pages
+      searchbar
+      id/isbn bars
+      books/students (probs styled the same)(includes check out and in, and probably add books admin page)
+    reports
+      current design needs a 3-split with vertical styled lists and radio buttons
+      report body as a spreadsheet-type

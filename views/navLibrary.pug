@@ -3,17 +3,18 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/Pure.css')
+    link(rel='stylesheet' href='https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css')
   body
-    section.navcontainer
-      table
-        tr
-          td
-            a(href="/")
-              img.navBar(src="/images/NavHomeUnselected.svg" style="float:left;")
-          td
-            a(href="/library")
-              img.navBar(src="/images/NavLibrarySelected.svg" style="margin-left:30%")
-          td
-            a(href="/admin")
-              img.navBar(src="/images/NavAdminUnselected.svg" style="margin-left:70%")
+    section.pure-g.navBar
+      div.pure-u-1-3
+        a(href="/")
+          img.navButton(src='/images/navHomeUnselected.svg')
+      div.pure-u-1-3
+        a(href="/library")
+          img.navButton(src='/images/navLibrarySelected.svg')
+      div.pure-u-1-3
+        a(href="/admin/login")
+          img.navButton(src='/images/navAdminUnselected.svg')
+
     block content

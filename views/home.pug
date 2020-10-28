@@ -1,10 +1,11 @@
 extends navHome
 
 block content
-    div#PageCheckin(style="width:50%;height:50%;float:left;margin-top:5%")
+  div.pure-g
+    div.pure-u-1.pure-u-lg-1-2
       a(href="/checkin")
-        img.navPage(src="/images/PageCheckin.svg" style="float:left;margin-left:17%;")
+        img.pageButton(src="/images/PageCheckin.svg")
 
-    div#PageCheckout(style="height:50%;margin-left:50%;")
+    div.pure-u-1.pure-u-lg-1-2
       a(href="/checkout")
-        img.navPage(src="/images/PageCheckout.svg" style="margin-left:7%;margin-top:10%")
+        img.pageButton(src="/images/PageCheckout.svg")

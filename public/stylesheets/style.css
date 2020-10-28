@@ -1,40 +1,61 @@
-@@font-face {
-  font-family: BerlinSans;
-  src: url(stylesheets/BerlinSans.ttf)
+@font-face {
+  font-family: 'BerlinSans';
+  src: url('/stylesheets/BerlinSans.ttf') format("truetype");
+}
+
+* {
+  overflow: scroll;
+  box-sizing: border-box;
 }
 
 body {
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  font: 16px BerlinSans, BerlinSans, BerlinSans, sans-serif;
+  padding: 20px 50px 50px 50px;
+  font-size: 16px;
+  font-family: 'BerlinSans', sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
-img.navBar {
-  width:35%;
-  float:left;
+.pages-2 {
 }
-div.separator {
-    height:5%
-}
-.navcontainer {
-  width: auto;
-  height: auto;
-  margin: auto;
-
+.navBar {
+  margin: 10px 10px 75px 10px;
 }
 .navButton {
-  max-width: 25%;
-  height: auto;
+  margin: 0 auto;
+  display: block;
+  width: 25%;
+  min-width: 100px;
+  height: 5em;
   overflow: auto
 }
+.navButton:hover {
+  width: 35%;
+}
 
-.navPage {
-  width: 75%;
-  height: auto;
-  overflow: auto
+.pageButton {
+  margin: 0 auto;
+  overflow: auto;
+  display: block;
+  max-width: 400px;
+  width: 60%;
+}
+.pageButton:hover {
+  width: 70%;
+  max-width: 450px;
+}
+
+.login {
+  display: block;
+  font-size: 70px;
+  font-family: 'BerlinSans', sans-serif;
+  color: black;
+  text-align: center;
+}
+.bborder {
+  border: 3px dotted blue;
+}
+.gborder {
+  border: 3px dotted green;
 }
