@@ -1,4 +1,19 @@
 extends navHome
 
 block content
-  p Checkin returned books
+  div.center.form
+    div.pure-g
+      div.pure-u-1
+        h2 Check in your books
+
+    div.pure-g.formPage#studentID
+      div.pure-u-1.formPage
+        div
+          label(for="checkinStudent") Student ID
+          input.center#checkinStudent(name="checkin[studentID]" type="text")
+
+    div.pure-g.formPage#isbn
+      div.pure-u-1.formPage
+        div
+          label(for="checkinStudent") Book
+          input.center#checkinStudent(name="checkin[isbn]" type="text")

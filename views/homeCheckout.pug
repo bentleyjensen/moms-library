@@ -1,6 +1,19 @@
 extends navHome
 
 block content
-  h1= title
-  p Welcome to #{title}
-  p Checkout books to read!
+  div.center.form
+    div.pure-g
+      div.pure-u-1
+        h2 Check out a book to read!
+
+    div.pure-g.formPage#studentID
+      div.pure-u-1.formPage
+        div
+          label(for="checkoutStudent") Student ID
+          input.center#checkoutStudent(name="checkout[studentID]" type="text")
+
+    div.pure-g.formPage#isbn
+      div.pure-u-1.formPage
+        div
+          label(for="checkoutStudent") Book
+          input.center#checkoutStudent(name="checkout[isbn]" type="text")

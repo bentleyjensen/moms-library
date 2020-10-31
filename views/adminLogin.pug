@@ -1,6 +1,23 @@
 extends navAdmin
 
 block content
-  div.pure-g
-    div.pure-u-1
-      a.login(href="/admin") Login
+  div.center.form
+    div.pure-g
+      div.pure-u-1
+        h2 Login to Mom's Library
+
+    div.pure-g.formPage#loginUser
+      div.pure-u-1.formPage
+        div
+          label(for="user_Login") Username
+          input.center#user_Login(name="user[login]" type="text")
+
+    div.pure-g.formPage#loginPassword
+      div.pure-u-1.formPage
+        div
+          label(for="user_Password") Password
+          input#user_Password.center(name="user[password]" type="password")
+
+    div.pure-g
+      div.pure-u-1
+        a.loginButton.navText.center(href="/admin") Login

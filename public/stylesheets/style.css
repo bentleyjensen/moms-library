@@ -5,7 +5,6 @@
 
 * {
   overflow: scroll;
-  box-sizing: border-box;
 }
 
 body {
@@ -17,45 +16,86 @@ body {
 a {
   color: #00B7FF;
 }
-.pages-2 {
+
+input {
+  display: block;
+  padding: 5px 0;
+  margin: 0 auto;
+  width: 290px;
+  text-align: left !important;
+}
+label {
+  margin-right: 20px;
+  font-family: 'BerlinSans', sans-serif;
+
+}
+.pageNav {
+  height: 50px;
+  border: 10px 15px 20px 15px;
+  z-index: 100;
 }
 .navBar {
-  margin: 10px 10px 75px 10px;
+  margin: 10px 10px 20px 10px;
 }
 .navButton {
   margin: 0 auto;
   display: block;
-  width: 25%;
+  width: 125px;
   min-width: 100px;
   height: 5em;
   overflow: auto
 }
 .navButton:hover {
-  width: 35%;
+  width: 150px;
 }
 
 .pageButton {
   margin: 0 auto;
   overflow: auto;
   display: block;
-  max-width: 400px;
-  width: 60%;
+  width: 300px;
 }
 .pageButton:hover {
-  width: 70%;
-  max-width: 450px;
+  width: 315px;
 }
 
-.login {
+.navText {
   display: block;
-  font-size: 70px;
   font-family: 'BerlinSans', sans-serif;
   color: black;
+}
+.center {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .bborder {
   border: 3px dotted blue;
 }
 .gborder {
   border: 3px dotted green;
+}
+
+.backButton {
+  text-decoration: underline;
+
+}
+.loginButton {
+  font-size: 2.5em;
+}
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+
+.formPage {
+  vertical-align: middle;
+  margin: 0 auto 10px auto;
+  text-align: left;
+}
+
+.form {
+  width: 300px
 }
