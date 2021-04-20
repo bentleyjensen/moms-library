@@ -2,20 +2,22 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/Pure.css')
-    link(rel='stylesheet' href='https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css')
+    link(rel="stylesheet" href="/stylesheets/style.css")
+    link(rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css")
   body
     section.pure-g.navBar
       div.pure-u-1-3
         a(href="/")
-          img.navButton(src='/images/navHomeUnselected.svg')
+          img.navButton(src="/images/navHomeUnselected.svg")
       div.pure-u-1-3
         a(href="/library")
-          img.navButton(src='/images/navLibraryUnselected.svg')
+          img.navButton(src="/images/navLibraryUnselected.svg")
       div.pure-u-1-3
         a(href="/admin/login")
-          img.navButton(src='/images/navAdminSelected.svg')
+          img.navButton(src="/images/navAdminSelected.svg")
+
+    section.pure-g.navbar
       div.pure-u-1
         h2
           a.backButton.navText(onclick="window.history.back()") Back
